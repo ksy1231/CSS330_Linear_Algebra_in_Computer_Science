@@ -1,0 +1,235 @@
+>>> 
+ RESTART: G:\My Drive\Classes\CSS330\ClassUse\Assignments\Assignment-8+9-Part2\KelvinSung-AS9.py 
+A: Testing utilities: fraction_wrong(A, b, w)
+   With 3 patients and 3 features
+   pvec3= [1, 1, 1]
+      fraction_wrong(A, u, w=+1)  : 0.0
+      fraction_wrong(A, u, w=-1)  : 1.0
+      Random vector: [4, 5, -7]
+      fraction_wrong(A, u, w=Rand): 1.0
+   With 7 patients and 13 features
+   pvec7= [1, 1, 1, 1, 1, 1, 1]
+      fraction_wrong(A, u, w=+1)  : 0.0
+      fraction_wrong(A, u, w=-1)  : 1.0
+      Random vector: [0, 8, 7, 4, 1, 7, 3, -2, 8, -4, 1, -4, -5]
+      fraction_wrong(A, u, w=Rand): 0.0
+   With 20 patients and 22 features
+   pvec20= [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, -1]
+      fraction_wrong(A, u, w=+1)  : 0.05
+      fraction_wrong(A, u, w=-1)  : 0.95
+      Random vector: [0, -4, 1, -5, -6, 2, 7, -5, 3, 5, 2, -2, 7, 6, 8, 0, -7, -8, -6, 4, -8, 7]
+      fraction_wrong(A, u, w=Rand): 0.95
+=========> End of A: <===================
+
+
+B: Testing utilities: loss(A, b, w)
+   With simple case A= [[1, 2], [3, 4], [5, 6]]
+                    b= [1, 2, 3]
+   With 3 patients and 2 features
+   pvec3= [1, 2, 3]
+      loss(A, u, w=+1)  : 93
+      loss(A, u, w=-1)  : 293
+      Random vector: [2, -1]
+      loss(A, u, w=Rand): 2
+   With 3 patients and 3 features
+   pvec3= [1, 1, 1]
+      loss(A, u, w=+1)  : 80412.2901
+      loss(A, u, w=-1)  : 82385.69009999999
+      Random vector: [2, -6, -2]
+      loss(A, u, w=Rand): 306769.1828
+   With 7 patients and 13 features
+   pvec7= [1, 1, 1, 1, 1, 1, 1]
+      loss(A, u, w=+1)  : 9726685.321148876
+      loss(A, u, w=-1)  : 9757959.098988876
+      Random vector: [-1, -1, -4, 6, -6, -6, 2, 8, 7, -5, 1, 1, -5]
+      loss(A, u, w=Rand): 222203982.9038266
+   With 20 patients and 22 features
+   pvec20= [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, -1]
+      loss(A, u, w=+1)  : 25311864.434517577
+      loss(A, u, w=-1)  : 25391568.50905758
+      Random vector: [2, -2, 1, 6, -6, 4, 2, -1, 1, -3, -2, -3, -7, 0, 7, -6, -6, -4, -4, -7, -6, 4]
+      loss(A, u, w=Rand): 553657848.3888502
+=========> End of B: <===================
+
+
+C: Testing utilities: find_gradient(A, AT, b, w)
+   With simple case A= [[1, 2], [3, 4], [5, 6]]
+                    b= [1, 2, 3]
+   With 3 patients and 2 features
+   pvec3= [1, 2, 3]
+      find_gradient(A, AT, u, w=+1)  : [114, 144]
+      find_gradient(A, AT, u, w=-1)  : [-202, -256]
+      Random vector: [8, 0]
+      find_gradient(A, AT, u, w=Rand)  : [516, 648]
+   With 3 patients and 3 features
+   pvec3= [1, 1, 1]
+      find_gradient(A, AT, u, w=+1)  : [19099.0274, 16390.3088, 126315.94399999999]
+      find_gradient(A, AT, u, w=-1)  : [-19332.027400000003, -16587.9088, -127858.744]
+      Random vector: [8, -1, -2]
+      find_gradient(A, AT, u, w=Rand)  : [-13916.977600000002, -11913.306, -92095.994]
+   With 7 patients and 13 features
+   pvec7= [1, 1, 1, 1, 1, 1, 1]
+      find_gradient(A, AT, u, w=+1)  : [287769.5960508, 265405.6997642, 1904404.6704791998, 16902897.117332, 1649.1543660346, 2461.7359259156, 2786.418999104, 1592.0493501184, 3148.883934146, 1017.7742341414, 10433.553770678, 12852.18085925, 72574.69615216]
+      find_gradient(A, AT, u, w=-1)  : [-288252.23605079995, -265884.8997642, -1907606.8704792, -16929817.917331997, -1652.2662460346003, -2466.5832859156, -2791.5961991040003, -1594.8875901184, -3154.7187341460003, -1019.7149941414, -10451.226170678, -12876.28805925, -72698.10415216]
+      Random vector: [5, 0, 6, 7, 3, -6, 2, -5, 7, 2, -2, -1, -8]
+      find_gradient(A, AT, u, w=Rand)  : [1928981.4933198, 1774900.8699794002, 12764225.4900642, 113477821.239698, 11011.0554872314, 16399.011364765604, 18600.782849556, 10644.3556199616, 21035.226322426, 6792.6720576924, 69867.167939418, 85827.60417861398, 485885.69573178]
+   With 20 patients and 22 features
+   pvec20= [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, -1]
+      find_gradient(A, AT, u, w=+1)  : [722132.7043665601, 854451.66499066, 4785421.81290348, 39045509.138356805, 4462.00358641988, 6608.422369895702, 6621.526399854839, 3709.0456975329002, 8510.059245401402, 2819.4322462422797, 24770.652526980197, 49962.676927516, 188768.924099944, 2900329.9639408803, 281.683357622428, 1475.248456833258, 1738.2097915454, 698.1516133079421, 925.63308597982, 212.995390161722, 883560.58260658, 1170570.37434496]
+      find_gradient(A, AT, u, w=-1)  : [-723300.7043665601, -855952.14499066, -4793183.13290348, -39106318.7383568, -4469.7897064198805, -6620.5641298957, -6633.301119854839, -3715.3238975329, -8524.697645401402, -2824.3996462422792, -24810.500126980198, -50048.941327516, -189068.73209994397, -2904774.4839408803, -282.15296962242803, -1478.0202528332582, -1741.2653515454, -699.290497307942, -927.25464597982, -213.38591816172203, -884998.6626065802, -1172659.4943449602]
+      Random vector: [0, -5, -1, 3, -3, 2, 5, -7, -5, -4, -1, -7, -6, -8, -5, -2, -5, 4, -6, 3, -5, -7]
+      find_gradient(A, AT, u, w=Rand)  : [997422.02724144, 1156938.5866759797, 6594930.0866321605, 54851035.56466639, 5945.806096166881, 8451.585102290343, 8628.818459033, 4943.86997156358, 11350.7245146114, 3732.8696079453202, 33218.8981615298, 65221.0172293264, 249848.07765736396, 3924290.46569188, 383.431511427184, 1862.289098161386, 2271.7314738266405, 936.3400642320139, 1201.8080075174998, 273.264279220254, 1213977.76409194, 1572170.86128312]
+=========> End of C: <===================
+
+Training data: max patients=300, max features=30
+Please enter: number of patients, features, printing frequency and cycles to train the system: 4, 3, 1, 5
+Patients:4, Features:3, Training Cycles:5
+   iteration step=0  Wrong_Fraction=0.00000   Loss=816.864112177628
+   iteration step=1  Wrong_Fraction=0.00000   Loss=816.6745234021465
+   iteration step=2  Wrong_Fraction=0.00000   Loss=816.4849786633246
+   iteration step=3  Wrong_Fraction=0.00000   Loss=816.2954779509333
+   iteration step=4  Wrong_Fraction=0.00000   Loss=816.1060212547468
+Training result: [0.099989842176338, 0.09999022633157226, 0.09993261908415964]
+With training data ... fraction_wrong= 0.0
+With validate data ... fraction_wrong= 0.7692307692307693
+
+Training data: max patients=300, max features=30
+Please enter: number of patients, features, printing frequency and cycles to train the system: 30, 10, 1, 5
+Patients:30, Features:10, Training Cycles:5
+   iteration step=0  Wrong_Fraction=0.10000   Loss=273599.6906160569
+   iteration step=1  Wrong_Fraction=0.10000   Loss=249065.90403866937
+   iteration step=2  Wrong_Fraction=0.10000   Loss=226733.57819283
+   iteration step=3  Wrong_Fraction=0.10000   Loss=206405.17198594523
+   iteration step=4  Wrong_Fraction=0.10000   Loss=187900.8700484879
+Training result: [0.09956066904729514, 0.09948670323247229, 0.09709392363000072, 0.07622908981935472, 0.09999729303382007, 0.09999607449642883, 0.09999611935161905, 0.09999775893133062, 0.09999477373354383, 0.09999830885542786]
+With training data ... fraction_wrong= 0.1
+With validate data ... fraction_wrong= 0.7692307692307693
+
+Training data: max patients=300, max features=30
+Please enter: number of patients, features, printing frequency and cycles to train the system: 300, 30, 100, 1000
+Patients:300, Features:30, Training Cycles:1000
+   iteration step=99  Wrong_Fraction=0.70667   Loss=13514.153663078512
+   iteration step=199  Wrong_Fraction=0.70333   Loss=9816.08265886493
+   iteration step=299  Wrong_Fraction=0.70000   Loss=8320.768818778903
+   iteration step=399  Wrong_Fraction=0.67667   Loss=7384.407803144048
+   iteration step=499  Wrong_Fraction=0.66667   Loss=6644.662696708899
+   iteration step=599  Wrong_Fraction=0.65667   Loss=6013.232677950029
+   iteration step=699  Wrong_Fraction=0.65333   Loss=5461.768030846917
+   iteration step=799  Wrong_Fraction=0.64000   Loss=4976.153477728547
+   iteration step=899  Wrong_Fraction=0.62667   Loss=4546.56070499226
+   iteration step=999  Wrong_Fraction=0.62333   Loss=4165.130806241017
+Training result: [0.08912259490260557, 0.07765576832096102, 0.03080283567066646, -0.025033357005627112, 0.09987252892421351, 0.0998922941795861, 0.09995476230921459, 0.0999867945062362, 0.09975917302720202, 0.09991126262486193, 0.09960763406384641, 0.09808331814142512, 0.09730415967149687, 0.08225238148706329, 0.09998871260791999, 0.09996443470910014, 0.09995389077216328, 0.09998548447644473, 0.09996667475670361, 0.09999342354736573, 0.08817334021379386, 0.0701732635148047, 0.02370954280697057, 0.002564230675215034, 0.09982786493596245, 0.09975161289893814, 0.09980013982489612, 0.09993432207162799, 0.09962873472811304, 0.09988646748069414]
+With training data ... fraction_wrong= 0.6233333333333333
+With validate data ... fraction_wrong= 0.75
+
+Training data: max patients=300, max features=30
+Please enter: number of patients, features, printing frequency and cycles to train the system: 300, 30, 1000, 99999
+Patients:300, Features:30, Training Cycles:99999
+   iteration step=999  Wrong_Fraction=0.62333   Loss=4165.130806241017
+   iteration step=1999  Wrong_Fraction=0.55000   Loss=1949.452329792786
+   iteration step=2999  Wrong_Fraction=0.52000   Loss=1058.0780491416397
+   iteration step=3999  Wrong_Fraction=0.44333   Loss=641.6440164244655
+   iteration step=4999  Wrong_Fraction=0.41000   Loss=435.0904850428293
+   iteration step=5999  Wrong_Fraction=0.35000   Loss=330.124821014813
+   iteration step=6999  Wrong_Fraction=0.29667   Loss=275.94845752840797
+   iteration step=7999  Wrong_Fraction=0.27667   Loss=247.44873832622304
+   iteration step=8999  Wrong_Fraction=0.24333   Loss=231.99142607322233
+   iteration step=9999  Wrong_Fraction=0.22000   Loss=223.1839706923775
+   iteration step=10999  Wrong_Fraction=0.21000   Loss=217.78549603866105
+   iteration step=11999  Wrong_Fraction=0.20667   Loss=214.1512916730921
+   iteration step=12999  Wrong_Fraction=0.19000   Loss=211.44580868318897
+   iteration step=13999  Wrong_Fraction=0.18333   Loss=209.24384659903808
+   iteration step=14999  Wrong_Fraction=0.18333   Loss=207.3283545267157
+   iteration step=15999  Wrong_Fraction=0.17667   Loss=205.5878988611451
+   iteration step=16999  Wrong_Fraction=0.17333   Loss=203.96466670853772
+   iteration step=17999  Wrong_Fraction=0.16667   Loss=202.42809547194506
+   iteration step=18999  Wrong_Fraction=0.16667   Loss=200.96149760164428
+   iteration step=19999  Wrong_Fraction=0.17000   Loss=199.55527537227525
+   iteration step=20999  Wrong_Fraction=0.16667   Loss=198.20347761577932
+   iteration step=21999  Wrong_Fraction=0.16333   Loss=196.90205129110745
+   iteration step=22999  Wrong_Fraction=0.16333   Loss=195.64795262190287
+   iteration step=23999  Wrong_Fraction=0.16333   Loss=194.43869422744856
+   iteration step=24999  Wrong_Fraction=0.16333   Loss=193.27211344494197
+   iteration step=25999  Wrong_Fraction=0.16000   Loss=192.14625291133083
+   iteration step=26999  Wrong_Fraction=0.16333   Loss=191.05929816053538
+   iteration step=27999  Wrong_Fraction=0.16000   Loss=190.0095442174201
+   iteration step=28999  Wrong_Fraction=0.15667   Loss=188.99537697625468
+   iteration step=29999  Wrong_Fraction=0.15667   Loss=188.01526215291787
+   iteration step=30999  Wrong_Fraction=0.15333   Loss=187.06773815073723
+   iteration step=31999  Wrong_Fraction=0.15000   Loss=186.15141098059894
+   iteration step=32999  Wrong_Fraction=0.14333   Loss=185.26495028925714
+   iteration step=33999  Wrong_Fraction=0.14333   Loss=184.40708601306477
+   iteration step=34999  Wrong_Fraction=0.14000   Loss=183.57660540942098
+   iteration step=35999  Wrong_Fraction=0.14000   Loss=182.7723503375662
+   iteration step=36999  Wrong_Fraction=0.14000   Loss=181.993214721006
+   iteration step=37999  Wrong_Fraction=0.13667   Loss=181.23814215470708
+   iteration step=38999  Wrong_Fraction=0.13667   Loss=180.50612363598154
+   iteration step=39999  Wrong_Fraction=0.13333   Loss=179.79619540608763
+   iteration step=40999  Wrong_Fraction=0.13333   Loss=179.10743689377645
+   iteration step=41999  Wrong_Fraction=0.13000   Loss=178.4389687542655
+   iteration step=42999  Wrong_Fraction=0.13000   Loss=177.78995099833418
+   iteration step=43999  Wrong_Fraction=0.13000   Loss=177.15958120696334
+   iteration step=44999  Wrong_Fraction=0.13000   Loss=176.54709282737684
+   iteration step=45999  Wrong_Fraction=0.13000   Loss=175.95175354666384
+   iteration step=46999  Wrong_Fraction=0.13000   Loss=175.3728637393864
+   iteration step=47999  Wrong_Fraction=0.13000   Loss=174.8097549857785
+   iteration step=48999  Wrong_Fraction=0.13000   Loss=174.26178865731163
+   iteration step=49999  Wrong_Fraction=0.13000   Loss=173.72835456654968
+   iteration step=50999  Wrong_Fraction=0.12667   Loss=173.2088696783755
+   iteration step=51999  Wrong_Fraction=0.12667   Loss=172.7027768797851
+   iteration step=52999  Wrong_Fraction=0.12667   Loss=172.20954380559522
+   iteration step=53999  Wrong_Fraction=0.12667   Loss=171.72866171751426
+   iteration step=54999  Wrong_Fraction=0.12667   Loss=171.25964443415523
+   iteration step=55999  Wrong_Fraction=0.12667   Loss=170.8020273096693
+   iteration step=56999  Wrong_Fraction=0.12667   Loss=170.35536625879556
+   iteration step=57999  Wrong_Fraction=0.12667   Loss=169.91923682620728
+   iteration step=58999  Wrong_Fraction=0.12667   Loss=169.49323329815093
+   iteration step=59999  Wrong_Fraction=0.13000   Loss=169.07696785444801
+   iteration step=60999  Wrong_Fraction=0.13000   Loss=168.67006975902444
+   iteration step=61999  Wrong_Fraction=0.13000   Loss=168.27218458722228
+   iteration step=62999  Wrong_Fraction=0.13000   Loss=167.8829734882124
+   iteration step=63999  Wrong_Fraction=0.13333   Loss=167.50211248091983
+   iteration step=64999  Wrong_Fraction=0.13333   Loss=167.12929178193207
+   iteration step=65999  Wrong_Fraction=0.13333   Loss=166.76421516394214
+   iteration step=66999  Wrong_Fraction=0.13333   Loss=166.40659934333186
+   iteration step=67999  Wrong_Fraction=0.13333   Loss=166.0561733955756
+   iteration step=68999  Wrong_Fraction=0.13000   Loss=165.7126781971961
+   iteration step=69999  Wrong_Fraction=0.13000   Loss=165.3758658930688
+   iteration step=70999  Wrong_Fraction=0.13000   Loss=165.04549938791712
+   iteration step=71999  Wrong_Fraction=0.13000   Loss=164.72135186090333
+   iteration step=72999  Wrong_Fraction=0.13000   Loss=164.4032063022648
+   iteration step=73999  Wrong_Fraction=0.13000   Loss=164.090855070989
+   iteration step=74999  Wrong_Fraction=0.13000   Loss=163.78409947257535
+   iteration step=75999  Wrong_Fraction=0.13000   Loss=163.4827493559692
+   iteration step=76999  Wrong_Fraction=0.13000   Loss=163.18662272879638
+   iteration step=77999  Wrong_Fraction=0.12667   Loss=162.895545390065
+   iteration step=78999  Wrong_Fraction=0.12667   Loss=162.6093505795432
+   iteration step=79999  Wrong_Fraction=0.12667   Loss=162.32787864305138
+   iteration step=80999  Wrong_Fraction=0.12667   Loss=162.05097671294868
+   iteration step=81999  Wrong_Fraction=0.12667   Loss=161.7784984031205
+   iteration step=82999  Wrong_Fraction=0.12667   Loss=161.5103035178096
+   iteration step=83999  Wrong_Fraction=0.12667   Loss=161.2462577736596
+   iteration step=84999  Wrong_Fraction=0.12667   Loss=160.98623253437253
+   iteration step=85999  Wrong_Fraction=0.12667   Loss=160.73010455740493
+   iteration step=86999  Wrong_Fraction=0.12667   Loss=160.4777557521569
+   iteration step=87999  Wrong_Fraction=0.12667   Loss=160.22907294913014
+   iteration step=88999  Wrong_Fraction=0.12333   Loss=159.98394767955844
+   iteration step=89999  Wrong_Fraction=0.12333   Loss=159.74227596503127
+   iteration step=90999  Wrong_Fraction=0.12333   Loss=159.50395811666027
+   iteration step=91999  Wrong_Fraction=0.12333   Loss=159.26889854335215
+   iteration step=92999  Wrong_Fraction=0.12333   Loss=159.03700556877527
+   iteration step=93999  Wrong_Fraction=0.12333   Loss=158.80819125662217
+   iteration step=94999  Wrong_Fraction=0.12333   Loss=158.58237124379792
+   iteration step=95999  Wrong_Fraction=0.12667   Loss=158.35946458116334
+   iteration step=96999  Wrong_Fraction=0.12667   Loss=158.13939358150031
+   iteration step=97999  Wrong_Fraction=0.12667   Loss=157.92208367436382
+   iteration step=98999  Wrong_Fraction=0.12667   Loss=157.70746326751214
+Training result: [0.07032093619070058, 0.01403686281262078, -0.05753153223402179, 0.0027657515182188354, 0.09967650835966248, 0.10046340822953827, 0.1008348673187532, 0.10046915331113321, 0.09935154325176208, 0.09969132076222087, 0.09883097561918257, 0.08838380975979108, 0.09463075569185256, -0.007213893687146433, 0.09995069647116446, 0.10000507064156593, 0.09991845989102448, 0.09999670968777741, 0.09986747345540876, 0.09997856893526554, 0.0753963889297531, 0.0019336695756855052, -0.002312114686585913, 0.0009364928878921256, 0.09967541098350745, 0.10216073891097378, 0.10264967424517432, 0.10094830625209157, 0.09966460289489444, 0.09984536405401263]
+With training data ... fraction_wrong= 0.12666666666666668
+With validate data ... fraction_wrong= 0.057692307692307696
+
+Training data: max patients=300, max features=30
+Please enter: number of patients, features, printing frequency and cycles to train the system: -1, -1, -1, -1
+Patients:-1, Features:-1, Training Cycles:-1
+Thanks for trying, Bye
+>>> 

@@ -1,0 +1,163 @@
+Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> 
+ RESTART: G:\My Drive\Classes\CSS330\ClassUse\Quiz\Quiz-9-Lab-8.4.ML\11-30-Lab-8.4 (AS9-Student-GPA Example)\StudentGPA.py 
+
+Training data: max students=137, max features=17
+Please enter: number of students, features, cycles to train the system, and print interval: 10, 17, 10, 1
+students:10, Features:17, Training Cycles:10, Print interval:1
+
+ ********** iteration step=1  Loss=1182032.7274537391******** 
+
+
+ ********** iteration step=3  Loss=1100957.6602901986******** 
+
+
+ ********** iteration step=5  Loss=1025449.5713437645******** 
+
+
+ ********** iteration step=7  Loss=955126.1956900237******** 
+
+
+ ********** iteration step=9  Loss=889631.5172227308******** 
+
+               Training result=  0.7134   0.7933   0.8961   0.9372   0.8652   0.8967   0.9114   0.8915   0.8887   0.8636   0.8239    0.823   0.9483   0.8302   0.8681   0.8149   0.8686 
+        With training data, Aw=   327.3    302.2    271.5    347.4    348.8    277.0    216.6    221.2    386.5    266.6 
+      Data from source file, b=     3.6      3.0      2.6      3.3      3.4      3.0      2.4      2.0      3.5      2.8 
+                     Loss=8.896e+05
+  0-th student: data says= 2.5, our prediction=361.44, loss=128836.56
+  1-th student: data says= 1.9, our prediction=215.94, loss=45813.79
+  2-th student: data says= 3.2, our prediction=421.83, loss=175247.86
+  3-th student: data says= 3.1, our prediction=314.43, loss=96926.44
+  4-th student: data says= 2.6, our prediction=292.91, loss=84280.58
+  5-th student: data says= 3.2, our prediction=403.14, loss=159950.12
+  6-th student: data says= 3.7, our prediction=492.09, loss=238524.27
+  7-th student: data says= 3.3, our prediction=373.35, loss=136938.82
+  8-th student: data says= 2.7, our prediction=333.91, loss=109702.21
+  9-th student: data says= 3.2, our prediction=471.74, loss=219527.12
+ 10-th student: data says= 2.5, our prediction=354.43, loss=123852.96
+ 11-th student: data says= 3.3, our prediction=405.07, loss=161419.16
+ 12-th student: data says= 3.2, our prediction=409.92, loss=165425.08
+ 13-th student: data says= 3.7, our prediction=423.15, loss=175939.70
+ 14-th student: data says= 3.6, our prediction=456.21, loss=204857.03
+ 15-th student: data says= 3.3, our prediction=408.52, loss=164204.82
+ 16-th student: data says= 1.7, our prediction=217.36, loss=46510.12
+ 17-th student: data says= 2.9, our prediction=343.96, loss=116322.87
+ 18-th student: data says= 3.1, our prediction=397.03, loss=155181.38
+ 19-th student: data says= 3.7, our prediction=442.93, loss=192925.04
+Total error: 2902385.93
+
+Training data: max students=137, max features=17
+Please enter: number of students, features, cycles to train the system, and print interval: 10, 17, 99999, 10000
+students:10, Features:17, Training Cycles:99999, Print interval:10000
+
+ ********** iteration step=10000  Loss=26.371264914526492******** 
+
+
+ ********** iteration step=20001  Loss=10.378611642789036******** 
+
+
+ ********** iteration step=30002  Loss=4.321930733035901******** 
+
+
+ ********** iteration step=40003  Loss=1.8433907056049703******** 
+
+
+ ********** iteration step=50004  Loss=0.8031753393993377******** 
+
+
+ ********** iteration step=60005  Loss=0.35722662748553996******** 
+
+
+ ********** iteration step=70006  Loss=0.16201426124162205******** 
+
+
+ ********** iteration step=80007  Loss=0.07480471146032998******** 
+
+
+ ********** iteration step=90008  Loss=0.0350897954639877******** 
+
+               Training result= -0.2547  -0.2547   0.3067   0.6131   0.2654  0.01759   0.2903   0.2027   0.3578  -0.2019  -0.1474 -0.08033   0.3919  -0.1961   0.5071  -0.2145  0.02584 
+        With training data, Aw=   3.565    3.003    2.592    3.352    3.382    2.985    2.378    2.066    3.445    2.865 
+      Data from source file, b=     3.6      3.0      2.6      3.3      3.4      3.0      2.4      2.0      3.5      2.8 
+                     Loss=  0.0167
+  0-th student: data says= 2.5, our prediction= 33.46, loss=958.70
+  1-th student: data says= 1.9, our prediction= 13.19, loss=127.47
+  2-th student: data says= 3.2, our prediction= 32.71, loss=870.73
+  3-th student: data says= 3.1, our prediction= 40.24, loss=1379.20
+  4-th student: data says= 2.6, our prediction= 29.55, loss=726.09
+  5-th student: data says= 3.2, our prediction= 35.08, loss=1016.38
+  6-th student: data says= 3.7, our prediction= 24.45, loss=430.61
+  7-th student: data says= 3.3, our prediction= 41.76, loss=1479.40
+  8-th student: data says= 2.7, our prediction= 27.77, loss=628.63
+  9-th student: data says= 3.2, our prediction= 58.35, loss=3041.51
+ 10-th student: data says= 2.5, our prediction= 43.40, loss=1672.84
+ 11-th student: data says= 3.3, our prediction= 39.59, loss=1317.02
+ 12-th student: data says= 3.2, our prediction= 28.77, loss=654.02
+ 13-th student: data says= 3.7, our prediction= 33.82, loss=907.31
+ 14-th student: data says= 3.6, our prediction= 53.24, loss=2463.93
+ 15-th student: data says= 3.3, our prediction= 33.72, loss=925.66
+ 16-th student: data says= 1.7, our prediction= 11.95, loss=105.14
+ 17-th student: data says= 2.9, our prediction= 14.55, loss=135.74
+ 18-th student: data says= 3.1, our prediction= 32.98, loss=892.89
+ 19-th student: data says= 3.7, our prediction= 41.54, loss=1431.62
+Total error:   21164.90
+
+Training data: max students=137, max features=17
+Please enter: number of students, features, cycles to train the system, and print interval: 137, 17, 99999, 10000
+students:137, Features:17, Training Cycles:99999, Print interval:10000
+
+ ********** iteration step=10000  Loss=22.311866622516906******** 
+
+
+ ********** iteration step=20001  Loss=9.871954847150125******** 
+
+
+ ********** iteration step=30002  Loss=8.928200156878692******** 
+
+
+ ********** iteration step=40003  Loss=8.853217590771806******** 
+
+
+ ********** iteration step=50004  Loss=8.847255258166564******** 
+
+
+ ********** iteration step=60005  Loss=8.846781149129034******** 
+
+
+ ********** iteration step=70006  Loss=8.846743449213712******** 
+
+
+ ********** iteration step=80007  Loss=8.846740451414659******** 
+
+
+ ********** iteration step=90008  Loss=8.846740213037492******** 
+
+               Training result=0.002651 0.003859  0.00784  0.02577 0.002657  0.00611  0.01214  0.01977  0.01838 0.008503 0.007453 0.007123  0.02003 0.006042 0.008265 0.006311  0.01024 
+        With training data, Aw=   3.264     2.93    2.655    3.451    3.519    2.824    2.273    2.146    3.641    2.736    2.768    2.877    3.114    3.163    3.001    2.584    3.199    2.079    2.785    2.362    2.598    2.399    3.374    2.691    2.865    2.676    2.932    2.413    2.852    2.355    2.887    4.067    2.862    2.466    2.807    3.546    3.183    4.559    3.497    3.361    2.591    2.823    2.696    2.921    2.594    3.042    2.785    2.904    4.099    3.348    2.949    3.232    3.304    3.025    2.322    2.589    2.828    3.175    3.598    3.194    3.115    1.908    1.576     3.01    3.021    2.503    2.741     2.77    3.001    3.007    2.697    2.163    2.043    2.587    2.975    3.412     1.95    4.164    3.011    3.374    3.068    3.328    2.118    2.726    2.825    2.632    2.811     2.26    2.749    3.207    2.452    2.739    2.345    2.155    2.506    3.703    2.818    3.186    2.504    2.267    2.052    2.638    3.294    3.201    2.701    2.823    2.761    2.583    3.259    3.588     2.02    2.418    2.198    2.297    2.914    2.635    2.532    2.504    2.398    2.145     3.07    2.535    3.489    2.807    3.278    3.577    3.063    2.804     2.94    2.608    2.764    1.975      2.3    2.791    3.168    1.952    2.408 
+      Data from source file, b=     3.6      3.0      2.6      3.3      3.4      3.0      2.4      2.0      3.5      2.8      2.9      2.8      3.2      3.5      2.7      2.4      3.1      1.8      3.2      2.6      2.7      2.4      3.1      2.4      3.0      2.6      2.6      2.3      3.1      2.4      2.7      3.9      3.0      2.9      2.9      3.7      2.9      4.0      3.4      3.3      3.1      3.2      2.3      2.9      2.5      2.9      2.8      2.5      4.0      4.0      2.8      3.2      3.4      2.6      2.6      2.8      2.9      3.0      3.3      3.2      3.1      1.6      1.6      3.0      2.7      2.5      2.7      2.9      3.0      3.1      3.2      2.3      2.6      2.1      2.8      3.3      2.1      3.8      2.9      3.5      2.8      3.0      1.9      2.9      3.2      3.2      3.0      2.2      2.9      3.2      2.6      2.5      2.4      2.1      2.6      3.7      3.2      2.8      2.5      2.5      2.5      2.6      3.2      3.3      2.8      2.8      2.8      2.5      2.9      3.1      1.9      2.6      2.8      2.4      3.0      2.5      3.1      2.4      2.8      1.7      3.1      2.6      3.4      3.1      3.2      3.4      3.2      3.2      3.0      2.4      2.9      2.2      2.6      2.7      2.8      2.1      3.0 
+                     Loss=   8.847
+  0-th student: data says= 2.5, our prediction=  4.18, loss=2.81
+  1-th student: data says= 1.9, our prediction=  2.42, loss=0.27
+  2-th student: data says= 3.2, our prediction=  4.53, loss=1.76
+  3-th student: data says= 3.1, our prediction=  3.71, loss=0.37
+  4-th student: data says= 2.6, our prediction=  3.00, loss=0.16
+  5-th student: data says= 3.2, our prediction=  4.65, loss=2.12
+  6-th student: data says= 3.7, our prediction=  5.27, loss=2.45
+  7-th student: data says= 3.3, our prediction=  4.44, loss=1.29
+  8-th student: data says= 2.7, our prediction=  3.66, loss=0.92
+  9-th student: data says= 3.2, our prediction=  5.97, loss=7.70
+ 10-th student: data says= 2.5, our prediction=  4.37, loss=3.49
+ 11-th student: data says= 3.3, our prediction=  4.96, loss=2.76
+ 12-th student: data says= 3.2, our prediction=  4.93, loss=2.98
+ 13-th student: data says= 3.7, our prediction=  4.64, loss=0.89
+ 14-th student: data says= 3.6, our prediction=  5.48, loss=3.52
+ 15-th student: data says= 3.3, our prediction=  4.23, loss=0.87
+ 16-th student: data says= 1.7, our prediction=  2.25, loss=0.31
+ 17-th student: data says= 2.9, our prediction=  3.56, loss=0.43
+ 18-th student: data says= 3.1, our prediction=  4.79, loss=2.85
+ 19-th student: data says= 3.7, our prediction=  4.93, loss=1.50
+Total error:      39.46
+
+Training data: max students=137, max features=17
+Please enter: number of students, features, cycles to train the system, and print interval: 

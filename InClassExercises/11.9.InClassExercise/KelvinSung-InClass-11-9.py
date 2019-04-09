@@ -1,0 +1,149 @@
+# Author: Kelvin Sung
+# In-class Exercise: Nov 9, 2018
+# Date: Nov 9, 2018
+    
+# Import the necessary libraries
+
+import sys
+sys.path.append('./Lib')  # this is where all the library files are
+
+import math
+import turtle_draw as td
+from MyFace import *
+
+""" Matrix utilities
+"""
+
+def dot_vector(v1, v2):
+    return sum(a*b for a, b in zip(v1, v2))
+
+
+def identity_mat():
+    """
+    returns the identity matrix in R-3
+    """
+    return [ [1 if i == j else 0 for i in range(3)] for j in range(3) ]
+
+
+def mat_vec(m, v):   # matrix is 3x3 vectors are 2
+    """
+    Multiplies the matrix to the vector
+         m[0][2] is added to x (translation)
+         m[1][2] is added to y
+    """
+    return [dot_vector(m[0], v)+m[0][2], dot_vector(m[1], v) + m[1][2]]
+
+
+def col_vec(m, i):  # create column vectors, i is 0, 1, or 2
+    return [m[0][i], m[1][i], m[2][i]]
+
+def mat_mat_v0(m1, m2):  #
+    """
+    two 3x3 matrices,
+    matrix-matrix multiplication, returns a new matrix
+    """
+    return [ [dot_vector(m1[0], col_vec(m2, 0)), dot_vector(m1[0], col_vec(m2, 1)), dot_vector(m1[0], col_vec(m2, 2))],
+             [dot_vector(m1[1], col_vec(m2, 0)), dot_vector(m1[1], col_vec(m2, 1)), dot_vector(m1[1], col_vec(m2, 2))],
+             [dot_vector(m1[2], col_vec(m2, 0)), dot_vector(m1[2], col_vec(m2, 1)), dot_vector(m1[2], col_vec(m2, 2))]
+            ]
+
+def mat_mat(m1, m2):  # two 3x3 matrices, with comprehension
+    return [ [dot_vector(m1[i], col_vec(m2, j)) for j in range(3)]
+                 for i in range(3) ]
+
+
+def trans_mat(x, y):
+    """
+    Constructs and returns a translation matrix
+    """
+    m = identity_mat()
+    m[0][2] = x
+    m[1][2] = y
+    return m
+
+
+def scale_mat(x, y):
+    """
+    Constructs and returns a scaling matrix
+    """
+    m = identity_mat()
+    m[0][0] = x
+    m[1][1] = y
+    return m
+
+
+def rotate_mat(theta):
+    """
+    theta: is an angle in degree
+    Constructs and returns a rotation matrix
+    """
+    m = identity_mat()
+    theta = math.radians(theta)
+    cosTheta = math.cos(theta)
+    sinTheta = math.sin(theta)
+    m[0][0] =  cosTheta
+    m[0][1] = -sinTheta
+    m[1][0] =  sinTheta
+    m[1][1] =  cosTheta
+    return m
+
+
+def mat_pt_list(m, ptList):
+    """ transform the entire ptList
+    """
+    return [mat_vec(m, v) for v in ptList]
+
+
+"""
+    Begin testing ...
+"""
+
+print("A: verify mat-mat function")
+m1 = [ [1, 2, 3], [2, 3, 4], [5, 6, 7]]
+m2 = [ [3, 4, 5], [1, 2, 3], [8, 9, 10]]
+print("m1=", m1)
+print("m2=", m2)
+print("mat_mat(m1, m2):", mat_mat(m1, m2))
+
+
+width = 800
+height = 600
+td.create_plot(width, height, True)
+
+pts, sizes, colors = getMyFace()
+input("\nB: Show the basic plot, <CR> to continue")
+td.plot_points(pts, sizes, colors)
+
+input("\nC: Transform by cm = T(200, -100) * R(45)")
+td.clear_plot(True)
+r = rotate_mat(45)
+t = trans_mat(200, -100)
+cm = mat_mat(t, r)
+td.plot_points(mat_pt_list(cm, myface_pt_list()), sizes, colors)
+
+
+input("\nD: Transform by cm = R(45) * T(200, -100)")
+td.clear_plot(True)
+cm = mat_mat(r, t)
+td.plot_points(mat_pt_list(cm, myface_pt_list()), sizes, colors)
+
+print("\nE: Testing left and right mouse clicks")
+print("   Left:  rotate by 45-degree first then translate to the click position")
+print("   Right: translate to the click position then rotate by 45-degree")
+
+def rmb(x, y):
+    print(f'Translate first: Right mouse click at: {x:4.2f} and {y:4.2f}')
+    td.clear_plot(True)
+    tm = trans_mat(x, y)
+    cm = mat_mat(r, tm)
+    td.plot_points(mat_pt_list(cm, myface_pt_list()), sizes, colors)
+
+def lmb(x, y):
+    print(f'Rotate first: Left mouse click at: {x:4.2f} and {y:4.2f}')
+    td.clear_plot(True)
+    tm = trans_mat(x, y)
+    cm = mat_mat(tm, r)
+    td.plot_points(mat_pt_list(cm, myface_pt_list()), sizes, colors)
+
+td.turtle_draw_mouse_click(rmb, 3)
+td.turtle_draw_mouse_click(lmb, 1)

@@ -1,0 +1,32 @@
+>>> 
+ RESTART: G:\My Drive\Classes\CSS330\ClassUse\0.ClassPlans\10-12-ClassExercise\KelvinSung-Inclass-10-12.py 
+===============
+Problem 1: here is my dictionary
+Key = MyName    value=[-1, -1, 1, 1, 1, -1, 0, 0, 1, 1, 1]
+Key = YourName  value=[1, 1, 0, -1, 1, 1, 1, 0, 1, 0, 1]
+Key = ThisName  value=[0, -1, 1, 1, 0, 0, -1, 1, 0, 1, 0]
+Key = ThatName  value=[1, 1, -1, -1, 1, 0, 0, 1, 0, 1, 0]
+
+===============
+Problem 2: here is my 11-element one vector
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+===============
+Problem 3: testing of dot product
+Dot MyName   and   MyName  =  9
+Dot YourName and YourName  =  8
+Dot ThisName and ThisName  =  6
+Dot ThatName and ThatName  =  7
+testing dot with oneVector
+Dot MyName   and OneVector =  3
+Dot YourName and OneVector =  6
+Dot ThisName and OneVector =  2
+Dot ThatName and OneVector =  3
+
+===============
+Problem 4: Analyze vectors
+MyName   : Number of 1: 6  number of -1: 3  number of zero: 2
+YourName : Number of 1: 7  number of -1: 1  number of zero: 3
+ThisName : Number of 1: 4  number of -1: 2  number of zero: 5
+ThatName : Number of 1: 5  number of -1: 2  number of zero: 4
+>>> 

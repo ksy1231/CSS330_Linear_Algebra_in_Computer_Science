@@ -1,0 +1,7 @@
+>>> 
+ RESTART: G:\My Drive\Classes\CSS330\ClassUse\ClassPlans\10.5.ClassExample\MySolution.py 
+Problem 1 Answer: ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+Problem 2 Answer: ['000', '001', '010', '011', '100', '101', '110', '111']
+Problem 3 Answer: {'a': '000', 'b': '001', 'c': '010', 'd': '011', 'e': '100', 'f': '101', 'g': '110'}
+Problem 4 Answer: {'000': 'a', '001': 'b', '010': 'c', '011': 'd', '100': 'e', '101': 'f', '110': 'g'}
+>>> 

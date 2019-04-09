@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+<title>plot</title>
+</head>
+<body>
+<script type="text/javascript">
+ <!-- from: https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep --> 
+function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms));}
+requestAnimationFrame(async function () { await sleep(80); location.reload(); });
+</script>
+<svg height="880" width="1280" xmlns="http://www.w3.org/2000/svg">
+<line x1="40" y1="440" x2="1240" y2="440"style="stroke:rgb(0, 0, 0);stroke-width:2"/>
+<line x1="640" y1="840" x2="640" y2="40"style="stroke:rgb(0, 0, 0);stroke-width:2"/>
+<line x1="40" y1="40" x2="1240" y2="40"style="stroke:rgb(100, 100, 100);stroke-width:1"/>
+<line x1="40" y1="840" x2="1240" y2="840"style="stroke:rgb(100, 100, 100);stroke-width:1"/>
+<line x1="40" y1="40" x2="40" y2="840"style="stroke:rgb(200, 100, 100);stroke-width:1"/>
+<line x1="1240" y1="40" x2="1240" y2="840"style="stroke:rgb(100, 200, 100);stroke-width:1"/>
+<circle cx="560" cy="320" r="20" fill="rgb(0, 0, 0)"/>
+<circle cx="720" cy="320" r="20" fill="rgb(0, 0, 0)"/>
+<circle cx="640" cy="385" r="10" fill="rgb(0, 0, 200)"/>
+<circle cx="640" cy="395" r="10" fill="rgb(0, 0, 200)"/>
+<circle cx="640" cy="405" r="10" fill="rgb(0, 0, 200)"/>
+<circle cx="634" cy="410" r="10" fill="rgb(0, 0, 200)"/>
+<circle cx="646" cy="410" r="10" fill="rgb(0, 0, 200)"/>
+<circle cx="570" cy="465" r="10" fill="rgb(255, 200, 200)"/>
+<circle cx="585" cy="485" r="10" fill="rgb(255, 200, 200)"/>
+<circle cx="605" cy="492" r="10" fill="rgb(255, 200, 200)"/>
+<circle cx="625" cy="495" r="10" fill="rgb(255, 200, 200)"/>
+<circle cx="640" cy="495" r="10" fill="rgb(255, 200, 200)"/>
+<circle cx="710" cy="465" r="10" fill="rgb(255, 200, 200)"/>
+<circle cx="695" cy="485" r="10" fill="rgb(255, 200, 200)"/>
+<circle cx="675" cy="492" r="10" fill="rgb(255, 200, 200)"/>
+<circle cx="655" cy="495" r="10" fill="rgb(255, 200, 200)"/>

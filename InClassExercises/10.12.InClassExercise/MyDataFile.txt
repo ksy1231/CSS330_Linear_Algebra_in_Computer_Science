@@ -1,0 +1,4 @@
+MyName    Teacher Strict    -1 -1  1  1 1 -1  0 0 1 1 1
+YourName  Student Excellent  1  1  0 -1 1  1  1 0 1 0 1
+ThisName  Student VeryGood   0 -1  1  1 0  0 -1 1 0 1 0
+ThatName  TA      Friendly   1  1 -1 -1 1  0  0 1 0 1 0

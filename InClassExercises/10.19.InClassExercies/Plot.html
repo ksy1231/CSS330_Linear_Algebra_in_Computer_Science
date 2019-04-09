@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+<title>plot</title>
+</head>
+<body>
+<script type="text/javascript">
+ <!-- from: https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep --> 
+function sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms));}
+requestAnimationFrame(async function () { await sleep(80); location.reload(); });
+</script>
+<svg height="680" width="680" xmlns="http://www.w3.org/2000/svg">
+<circle cx="630" cy="50" r="6" fill="rgb(255, 0, 0)"/>
+<circle cx="590" cy="50" r="2" fill="rgb(0, 0, 255)"/>
+<circle cx="670" cy="50" r="2" fill="rgb(0, 255, 255)"/>
+<circle cx="630" cy="10" r="2" fill="rgb(0, 255, 0)"/>
+<circle cx="630" cy="90" r="2" fill="rgb(0, 0, 0)"/>
+<circle cx="650" cy="30" r="1" fill="rgb(188, 0, 199)"/>
+<circle cx="650" cy="70" r="1" fill="rgb(199, 0, 188)"/>
+<circle cx="610" cy="70" r="1" fill="rgb(0, 199, 188)"/>
+<circle cx="610" cy="30" r="1" fill="rgb(199, 0, 0)"/>

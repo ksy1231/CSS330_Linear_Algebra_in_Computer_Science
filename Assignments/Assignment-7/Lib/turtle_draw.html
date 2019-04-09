@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module turtle_draw</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>turtle_draw</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:g%3A%5Cmy%20drive%5Cclasses%5Ccss330%5Cclassuse%5C0.classplans%5C11-2-classexercise%5Clib%5Cturtle_draw.py">g:\my drive\classes\css330\classuse\0.classplans\11-2-classexercise\lib\turtle_draw.py</a></font></td></tr></table>
+    <p><tt>This&nbsp;file&nbsp;contains&nbsp;a&nbsp;simple&nbsp;plotting&nbsp;interface&nbsp;based&nbsp;on&nbsp;the&nbsp;default<br>
+Python&nbsp;turtle&nbsp;graphics.&nbsp;The&nbsp;main&nbsp;functionality&nbsp;achieved&nbsp;is&nbsp;hidding&nbsp;the<br>
+"current&nbsp;position"&nbsp;of&nbsp;turtle&nbsp;graphics.&nbsp;<br>
+&nbsp;&nbsp;<br>
+Author:&nbsp;Kelvn&nbsp;Sung<br>
+Date:&nbsp;Oct&nbsp;2018</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top><a href="turtle.html">turtle</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-clear_plot"><strong>clear_plot</strong></a>(drawBounds=False)</dt><dd><tt>Clears&nbsp;everything&nbsp;<br>
+:param&nbsp;drawBounds:&nbsp;when&nbsp;true&nbsp;the&nbsp;x/y&nbsp;axis&nbsp;and&nbsp;plot&nbsp;bounds&nbsp;will&nbsp;be&nbsp;drawn</tt></dd></dl>
+ <dl><dt><a name="-close_plot"><strong>close_plot</strong></a>()</dt><dd><tt>Closes&nbsp;the&nbsp;current&nbsp;drawing&nbsp;session.&nbsp;After&nbsp;this&nbsp;none<br>
+of&nbsp;the&nbsp;drawing&nbsp;command&nbsp;will&nbsp;work.</tt></dd></dl>
+ <dl><dt><a name="-create_plot"><strong>create_plot</strong></a>(w, h, drawBounds=False)</dt><dd><tt>Creates&nbsp;a&nbsp;w&nbsp;by&nbsp;h&nbsp;drawing&nbsp;area&nbsp;based&nbsp;on&nbsp;the&nbsp;default&nbsp;turtle&nbsp;drawing&nbsp;lib<br>
+&nbsp;<br>
+:param&nbsp;drawBounds:&nbsp;when&nbsp;true&nbsp;the&nbsp;x/y&nbsp;axis&nbsp;and&nbsp;plot&nbsp;bounds&nbsp;will&nbsp;be&nbsp;drawn</tt></dd></dl>
+ <dl><dt><a name="-draw_axis"><strong>draw_axis</strong></a>()</dt><dd><tt>Draws&nbsp;the&nbsp;X/Y&nbsp;axis</tt></dd></dl>
+ <dl><dt><a name="-draw_bounds"><strong>draw_bounds</strong></a>()</dt><dd><tt>Draws&nbsp;the&nbsp;four&nbsp;surrounding&nbsp;bounds</tt></dd></dl>
+ <dl><dt><a name="-draw_circle"><strong>draw_circle</strong></a>(center, radius, color)</dt><dd><tt>Draws&nbsp;a&nbsp;circle&nbsp;with&nbsp;radius&nbsp;and&nbsp;radius&nbsp;at&nbsp;center</tt></dd></dl>
+ <dl><dt><a name="-draw_line"><strong>draw_line</strong></a>(p1, p2, color, width)</dt><dd><tt>Draws&nbsp;a&nbsp;line&nbsp;in&nbsp;"color"&nbsp;with&nbsp;"width"&nbsp;from&nbsp;p1&nbsp;to&nbsp;p2</tt></dd></dl>
+ <dl><dt><a name="-draw_point"><strong>draw_point</strong></a>(p, size, color)</dt><dd><tt>Draws&nbsp;a&nbsp;point,&nbsp;with&nbsp;size,&nbsp;and&nbsp;color&nbsp;at&nbsp;p</tt></dd></dl>
+ <dl><dt><a name="-plot_points"><strong>plot_points</strong></a>(pt_list, size_list, color_list)</dt><dd><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Input&nbsp;three&nbsp;lists&nbsp;must&nbsp;be&nbsp;the&nbsp;same&nbsp;length<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;input&nbsp;format,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pt_list&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;[x1,&nbsp;y1],&nbsp;[x2,&nbsp;y2]&nbsp;...&nbsp;]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;size_list&nbsp;=&nbsp;&nbsp;[&nbsp;size1,&nbsp;&nbsp;&nbsp;&nbsp;size2,&nbsp;&nbsp;&nbsp;...&nbsp;]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color_list&nbsp;=&nbsp;[&nbsp;color1,&nbsp;&nbsp;&nbsp;color2,&nbsp;&nbsp;...&nbsp;]<br>
+turtle_draw.pyx1,&nbsp;y1],&nbsp;etc.</tt></dd></dl>
+ <dl><dt><a name="-show_plot"><strong>show_plot</strong></a>()</dt><dd><tt>call&nbsp;this&nbsp;at&nbsp;the&nbsp;end&nbsp;of&nbsp;your&nbsp;drawing&nbsp;and&nbsp;when&nbsp;you&nbsp;want&nbsp;to&nbsp;see&nbsp;everything</tt></dd></dl>
+ <dl><dt><a name="-turtle_draw_mouse_click"><strong>turtle_draw_mouse_click</strong></a>(f, n)</dt><dd><tt>Sets&nbsp;up&nbsp;the&nbsp;call&nbsp;back&nbsp;function&nbsp;for&nbsp;when&nbsp;a&nbsp;mouse&nbsp;is&nbsp;clicked.<br>
+&nbsp;<br>
+f:&nbsp;is&nbsp;a&nbsp;function&nbsp;that&nbsp;accepts&nbsp;(x,&nbsp;y)&nbsp;parameters&nbsp;(mouse&nbsp;click&nbsp;position)<br>
+n:&nbsp;is&nbsp;a&nbsp;number&nbsp;1-Left&nbsp;Mouse,&nbsp;2-Middle&nbsp;Mouse&nbsp;3-Right&nbsp;Mouse<br>
+&nbsp;<br>
+f(x,y):&nbsp;will&nbsp;be&nbsp;called&nbsp;when&nbsp;user&nbsp;click&nbsp;the&nbsp;corresponding&nbsp;mouse&nbsp;button<br>
+in&nbsp;the&nbsp;turtle&nbsp;drawing&nbsp;area.</tt></dd></dl>
+</td></tr></table>
+</body></html>
